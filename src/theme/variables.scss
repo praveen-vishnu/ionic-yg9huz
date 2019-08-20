@@ -15,9 +15,6 @@ $app-direction: ltr;
 @import "ionic.globals";
 
 
- 
-@import "theme.light";
-@import "theme.dark";
 
 // Shared Variables
 // --------------------------------------------------
@@ -26,8 +23,9 @@ $app-direction: ltr;
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
-
-
+$text-color: #000;
+$background-color: #fff;
+$dark-bg: #090f2f;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -90,3 +88,13 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
+
+
+//Theme
+//------------------------------------------------
+
+ 
+@import "theme.light";
+@import "theme.dark";

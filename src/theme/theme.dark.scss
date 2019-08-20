@@ -1,9 +1,4 @@
 .dark-theme {
-    ion-content {
-      background-color: #090f2f;
-      color: #fff;
-    }
-   
     .toolbar-title {
       color: #fff;
     }
@@ -12,4 +7,45 @@
       border-color: #ff0fff;
       background-color: #090f2f;
     }
+
+  ion-segment {
+    background-color: $dark-bg;
+  }
+  ion-content {
+    background-color: $dark-bg;
+    color: #fff;
+  }
+
+    .refresher-refreshing-text {
+    color: #fff;
+  }
+
+  .toolbar-title {
+    color: #fff;
+  }
+
+  .bar-button-default {
+    color: #fff;
+  }
+
+  .item {
+    background-color: $dark-bg;
+  }
+
+  .label {
+    color: #fff;
+  }
+
+  .header .toolbar-background {
+    border-color: #ffffff;
+    background-color: $dark-bg;
+  }
+
+  .refresher-refreshing-text {
+    color: #fff;
+  }
+
+  ion-spinner * {
+    fill: #fff !important;
+  }
   }  
