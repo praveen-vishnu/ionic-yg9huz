@@ -46,15 +46,17 @@ loadMorePosts(){
   // this.ionViewDidLoad();
 }
 share(){
-  this.socialSharing.share("message", "subject", 'https://via.placeholder.com/300x250.png?text=Image+Loading', "url")
+  this.socialSharing.share(this.posts[this.sliderTwo.getActiveIndex()].title+'\n', "Crypto Feed", this.posts[this.sliderTwo.getActiveIndex()].image, this.posts[this.sliderTwo.getActiveIndex()].link)
     .then(() => {
 
-    }).catch(() => {
+    }).catch((err) => {
+     console.error(err);
 
   });
 }
 
 gotoFirstSlide(){
+  this.showHeader = false;
   this.sliderTwo.slideTo(0,500);
 }
  ionViewDidLoad() {
@@ -193,6 +195,8 @@ closeBrowser(){
 }
 
 like(){
-this.liked = !this.liked;
+        this.showHeader = false;
+// this.liked = !this.liked;
+window.open(this.posts[this.sliderTwo.getActiveIndex()].link,'_blank')
 }
 }

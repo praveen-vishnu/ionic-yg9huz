@@ -1,11 +1,11 @@
 
               <ion-header no-border *ngIf="showHeader">
             <ion-navbar>
-              <ion-buttons left>
+             <!--  <ion-buttons left>
                 <button ion-button icon-only>
                   <ion-icon name='settings' (click)="gotoSettings()"></ion-icon>
                 </button>
-              </ion-buttons>
+              </ion-buttons> -->
               <ion-title text-center>
                 Coinpedia.org
               </ion-title>
@@ -27,12 +27,12 @@
             <ion-slide>
             <ion-slides direction="vertical" spaceBetween="5" #sliderTwo (ionSlideReachEnd)="loadMorePosts()">
 
-                <ion-slide (click)="showHeader = !showHeader;shareLink = post.link " (pandown)="swipeEvent($event,i)" (swipeleft)="swipeLeft($event,post)" *ngFor="let post of posts;let i = index">
+                <ion-slide id="slide-post" (click)="showHeader = !showHeader;shareLink = post.link" (swipeleft)="swipeLeft($event,post)" *ngFor="let post of posts;let i = index">
 
                     <div class="header" style="background: linear-gradient(to top, transparent,black);"  (swipedown)="swipeDown($event)" >
-                        <img  [src]="post.image" style="border-radius: 20px 20px 0px 0;" onError="this.src='https://via.placeholder.com/300x250.png?text=Image+Loading'">
+                        <img  [src]="post.image" style="border-radius: 20px 20px 0px 0;" onError="this.src='https://lh3.googleusercontent.com/--pEnUJMyifg/XVugYEBn5vI/AAAAAAAAJog/UhFtiSQ3OLohboI201ovjEVzyCfJ85pngCK8BGAs/s0/2019-08-20.png'">
                     </div>
-                <div class="news-card z-depth-1" itemscope="" >
+                <div class="news-card z-depth-1" itemscope="" style="margin-top: 0;padding-top: 0">
                   <div class="news-card-title news-right-box">
                     <a class="clickable">
                       <span itemprop="headline" [innerHtml]="post.title"></span>
@@ -60,13 +60,13 @@
               <ion-title>
                 Coinpedia.org
               </ion-title>
-               <ion-buttons right>
+              <!--  <ion-buttons right>
                 <button ion-button icon-only>
                  <ion-icon name='open'>
                   <a [href]="browserURL" target="_blank"></a>
                  </ion-icon>
                 </button>
-              </ion-buttons>
+              </ion-buttons> -->
             </ion-navbar> 
           </ion-header>
           <div id="browser">
@@ -81,14 +81,15 @@
                  <button no-margin ion-button clear icon-only (click)="share()">
                   <ion-icon name='md-share'></ion-icon>
                 </button>
-                <p style="margin: 0;margin-top: -4px;color: #c5c5c5;font-size: 12px;">Share</p>
+                <p style="margin: 0;margin-top: -4px;color: #aaa;font-size: 12px;">Share</p>
               </ion-col>
               <ion-col text-center no-padding>
                  <button no-margin ion-button clear icon-only (click)="like()">
-                  <ion-icon style="font-size: 30px;" name='ios-thumbs-up-outline' *ngIf="!liked"></ion-icon>
-                  <ion-icon style="font-size: 30px;" name='ios-thumbs-up' *ngIf="liked"></ion-icon>
+                  <!-- <ion-icon style="font-size: 30px;" name='ios-thumbs-up-outline' *ngIf="!liked"></ion-icon> -->
+                  <!-- <ion-icon style="font-size: 30px;" name='ios-thumbs-up' *ngIf="liked"></ion-icon> -->
+                  <ion-icon style="font-size: 30px;" name='open'></ion-icon>
                 </button>
-                <p style="margin: 0;margin-top: -3px;color: #c5c5c5;font-size: 12px;">Like</p>
+                <p style="margin: 0;margin-top: -4px;color: #aaa;font-size: 12px;">Open in Browser</p>
               </ion-col>
             </ion-row>
           </ion-footer>
